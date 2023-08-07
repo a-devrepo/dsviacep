@@ -69,6 +69,7 @@ async function handleInputCepChange(event) {
     state.inputStreet.value = address.street;
     state.address = address;
 
+    setFormError("cep", "");
     state.inputNumber.focus();
   } catch (error) {
     state.inputStreet.value = "";
