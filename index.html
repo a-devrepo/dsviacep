@@ -32,7 +32,7 @@
                 class="form-input"
                 placeholder="CEP"
               />
-              <div class="error-message">Campo requerido</div>
+              <div class="error-message" data-error="cep">Campo requerido</div>
             </div>
             <div class="form-control">
               <label for="street"></label>
@@ -44,7 +44,6 @@
                 placeholder="Logradouro"
                 disabled
               />
-              <div class="error-message">Campo requerido</div>
             </div>
             <div class="form-control">
               <label for="number"></label>
@@ -55,7 +54,9 @@
                 class="form-input"
                 placeholder="Número"
               />
-              <div class="error-message">Campo requerido</div>
+              <div class="error-message" data-error="number">
+                Campo requerido
+              </div>
             </div>
             <div class="form-control">
               <label for="city"></label>
@@ -67,11 +68,12 @@
                 placeholder="Cidade"
                 disabled
               />
-              <div class="error-message">Campo requerido</div>
             </div>
             <div class="btn-container">
-              <button type="submit" class="btn btn-left">Salvar</button>
-              <button class="btn btn-right">Limpar</button>
+              <button name="btnSave" type="submit" class="btn btn-left">
+                Salvar
+              </button>
+              <button name="btnClear" class="btn btn-right">Limpar</button>
             </div>
           </form>
         </div>
