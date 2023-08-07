@@ -20,34 +20,54 @@
       </nav>
     </header>
     <main>
-      <section id="form-section">
-        <div>
+      <section id="form-section" class="form-container">
+        <div class="card-form">
           <form name="newAddress">
-            <div>
+            <div class="form-control">
               <label for="cep"></label>
-              <input type="text" name="cep" id="cep" placeholder="CEP" />
+              <input
+                type="text"
+                name="cep"
+                id="cep"
+                class="form-input"
+                placeholder="CEP"
+              />
+              <div class="error-message">Campo requerido</div>
             </div>
-            <div>
+            <div class="form-control">
               <label for="street"></label>
               <input
                 type="text"
                 name="street"
                 id="street"
-                placeholder="Street"
+                class="form-input"
+                placeholder="Logradouro"
+                disabled
               />
+              <div class="error-message">Campo requerido</div>
             </div>
-            <div>
+            <div class="form-control">
               <label for="number"></label>
               <input
                 type="text"
                 name="number"
                 id="number"
-                placeholder="Number"
+                class="form-input"
+                placeholder="Número"
               />
+              <div class="error-message">Campo requerido</div>
             </div>
-            <div>
+            <div class="form-control">
               <label for="city"></label>
-              <input type="text" name="city" id="city" placeholder="City" />
+              <input
+                type="text"
+                name="city"
+                id="city"
+                class="form-input"
+                placeholder="Cidade"
+                disabled
+              />
+              <div class="error-message">Campo requerido</div>
             </div>
             <div>
               <button type="submit">Salvar</button>
