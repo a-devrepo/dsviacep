@@ -57,9 +57,19 @@ function handleBtnClearClick(event) {
   clearForm();
 }
 
-async function handleBtnSaveClick(event) {
+function handleBtnSaveClick(event) {
   event.preventDefault();
-  listController.addcard(state.address);
+  const errors = addressService.getErrors(state.address);
+  const keys = Object.keys(errors);
+
+  if (keys.length > 0) {
+    keys.forEach((key) => {
+      setFormError(key, errors[key]);
+    });
+  } else {
+    listController.addcard(state.address);
+    clearForm();
+  }
 }
 
 async function handleInputCepChange(event) {
@@ -89,6 +99,8 @@ function clearForm() {
 
   setFormError("cep", "");
   setFormError("number", "");
+
+  state.address = new Address();
 
   state.inputCep.focus();
 }
